@@ -37,7 +37,12 @@
     .page {
       width: 210mm;
       min-height: 100%;
-      background: #ffffff;
+      background: #F6F9FC;
+      background-image: url('./images/page5-bg.png');
+      background-position: bottom;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-blend-mode: darken;
     }
 
     h1,
@@ -70,7 +75,7 @@
     }
 
     .pdf-title {
-      margin-bottom: 29px;
+      margin-bottom: 32px;
       margin-top: 90px;
       text-align: center;
     }
@@ -80,172 +85,216 @@
     }
 
     /* circle fragments css */
+    .donut__slice {
+      position: relative;
+    }
+
+    *,
+    *::after,
+    *::before {
+      box-sizing: border-box;
+    }
+
     .donut {
-  --donut-size: 350px;
-  --donut-border-width: 40px;
-  --donut-spacing: 0;
-  --donut-spacing-color: 255, 255, 255;
-  --donut-spacing-deg: calc(1deg * var(--donut-spacing));
-  border-radius: 50%;
-  height: var(--donut-size);
-  margin: 0 auto;
-  position: relative;
-  width: var(--donut-size);
-}
+      --donut-size: 350px;
+      --donut-border-width: 65px;
+      --donut-spacing: 0;
+      --donut-spacing-color: 255, 255, 255;
+      --donut-spacing-deg: calc(2deg * var(--donut-spacing));
+      border-radius: 50%;
+      height: var(--donut-size);
+      margin: 0 auto;
+      margin-bottom: 180px;
+      position: relative;
+      width: var(--donut-size);
+    }
 
-.donut__label {
-  left: 50%;
-  line-height: 1.5;
-  position: absolute;
-  text-align: center;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  width: 80%;
-}
+    .score-wrap{
+      width: min-content;
+    }
 
-.donut__label__heading {
-  font-size: 24px;
-  font-weight: 600;
-}
+    .donut__label {
+      left: 50%;
+      line-height: 1.5;
+      position: absolute;
+      text-align: center;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 210px;
+    }
 
-.donut__label__sub {
-  color: #666666;
-  font-size: 14px;
-  letter-spacing: 0.05em;
-}
+    .donut__label__heading {
+      font-size: 24px;
+      font-weight: 600;
+      color: #0090D6;
+    }
 
-.donut__slice {
-  height: 100%;
-  position: absolute;
-  width: 100%;
-}
+    .donut__label__sub {
+      color: #666666;
+      font-size: 14px;
+      letter-spacing: 0.05em;
+    }
 
-.donut__slice::before,
-.donut__slice::after {
-  border: var(--donut-border-width) solid rgba(0, 0, 0, 0);
-  border-radius: 50%;
-  content: '';
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-  width: 100%;
-}
+    .donut__slice {
+      height: 100%;
+      position: absolute;
+      width: 100%;
+    }
 
-.donut__slice::before {
-  border-width: calc(var(--donut-border-width) + 1px);
-  box-shadow: 0 0 1px 0 rgba(var(--donut-spacing-color), calc(100 * var(--donut-spacing)));
-}
+    .donut__slice::before,
+    .donut__slice::after {
+      border: var(--donut-border-width) solid rgba(0, 0, 0, 0);
+      border-radius: 50%;
+      content: "";
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      transform: rotate(45deg);
+      width: 100%;
+    }
 
-.donut__slice__first {
-  --first-start: 0;
-}
+    .donut__slice::before {
+      border-width: calc(var(--donut-border-width) + 1px);
+      box-shadow: 0 0 1px 0 rgba(var(--donut-spacing-color), calc(100 * var(--donut-spacing)));
+    }
 
-.donut__slice__first::before {
-  border-top-color: rgba(var(--donut-spacing-color), calc(100 * var(--donut-spacing)));
-  -webkit-transform: rotate(calc(360deg * var(--first-start) + 45deg));
-          transform: rotate(calc(360deg * var(--first-start) + 45deg));
-}
+    .donut__slice__first {
+      --first-start: 0;
+    }
 
-.donut__slice__first::after {
-  border-top-color: #ff6838;
-  border-right-color: rgba(255, 104, 56, calc(100 * (var(--first) - .25)));
-  border-bottom-color: rgba(255, 104, 56, calc(100 * (var(--first) - .5)));
-  border-left-color: rgba(255, 104, 56, calc(100 * (var(--first) - .75)));
-  -webkit-transform: rotate(calc(360deg * var(--first-start) + 45deg + var(--donut-spacing-deg)));
-          transform: rotate(calc(360deg * var(--first-start) + 45deg + var(--donut-spacing-deg)));
-}
+    .donut__slice__first::before {
+      border-top-color: rgba(var(--donut-spacing-color), calc(100 * var(--donut-spacing)));
+      transform: rotate(calc(360deg * var(--first-start) + 45deg));
+    }
 
-.donut__slice__second {
-  --second-start: calc(var(--first));
-  --second-check: max(calc(var(--second-start) - .5), 0);
-  -webkit-clip-path: inset(0 calc(50% * (var(--second-check) / var(--second-check))) 0 0);
-          clip-path: inset(0 calc(50% * (var(--second-check) / var(--second-check))) 0 0);
-}
+    .donut__slice__first::after {
+      border-top-color: #ff6838;
+      border-right-color: rgba(255, 104, 56, calc(100 * (var(--first) - 0.25)));
+      border-bottom-color: rgba(255, 104, 56, calc(100 * (var(--first) - 0.5)));
+      border-left-color: rgba(255, 104, 56, calc(100 * (var(--first) - 0.75)));
+      transform: rotate(calc(360deg * var(--first-start) + 45deg + var(--donut-spacing-deg)));
+    }
 
-.donut__slice__second::before {
-  border-top-color: rgba(var(--donut-spacing-color), calc(100 * var(--donut-spacing)));
-  -webkit-transform: rotate(calc(360deg * var(--second-start) + 45deg));
-          transform: rotate(calc(360deg * var(--second-start) + 45deg));
-}
+    .donut__slice__second {
+      --second-start: calc(var(--first));
+      --second-check: max(calc(var(--second-start) - 0.5), 0);
+      -webkit-clip-path: inset(0 calc(50% * (var(--second-check) / var(--second-check))) 0 0);
+      clip-path: inset(0 calc(50% * (var(--second-check) / var(--second-check))) 0 0);
+    }
 
-.donut__slice__second::after {
-  border-top-color: #ffc820;
-  border-right-color: rgba(255, 200, 32, calc(100 * (var(--second) - .25)));
-  border-bottom-color: rgba(255, 200, 32, calc(100 * (var(--second) - .5)));
-  border-left-color: rgba(255, 200, 32, calc(100 * (var(--second) - .75)));
-  -webkit-transform: rotate(calc(360deg * var(--second-start) + 45deg + var(--donut-spacing-deg)));
-          transform: rotate(calc(360deg * var(--second-start) + 45deg + var(--donut-spacing-deg)));
-}
+    .donut__slice__second::before {
+      border-top-color: rgba(var(--donut-spacing-color), calc(100 * var(--donut-spacing)));
+      transform: rotate(calc(360deg * var(--second-start) + 45deg));
+    }
 
-.donut__slice__third {
-  --third-start: calc(var(--first) + var(--second));
-  --third-check: max(calc(var(--third-start) - .5), 0);
-  -webkit-clip-path: inset(0 calc(50% * (var(--third-check) / var(--third-check))) 0 0);
-          clip-path: inset(0 calc(50% * (var(--third-check) / var(--third-check))) 0 0);
-}
+    .donut__slice__second::after {
+      border-top-color: #ffc820;
+      border-right-color: rgba(255, 200, 32, calc(100 * (var(--second) - 0.25)));
+      border-bottom-color: rgba(255, 200, 32, calc(100 * (var(--second) - 0.5)));
+      border-left-color: rgba(255, 200, 32, calc(100 * (var(--second) - 0.75)));
+      transform: rotate(calc(360deg * var(--second-start) + 45deg + var(--donut-spacing-deg)));
+    }
 
-.donut__slice__third::before {
-  border-top-color: rgba(var(--donut-spacing-color), calc(100 * var(--donut-spacing)));
-  -webkit-transform: rotate(calc(360deg * var(--third-start) + 45deg));
-          transform: rotate(calc(360deg * var(--third-start) + 45deg));
-}
+    .donut__slice__third {
+      --third-start: calc(var(--first) + var(--second));
+      --third-check: max(calc(var(--third-start) - 0.5), 0);
+      -webkit-clip-path: inset(0 calc(50% * (var(--third-check) / var(--third-check))) 0 0);
+      clip-path: inset(0 calc(50% * (var(--third-check) / var(--third-check))) 0 0);
+    }
 
-.donut__slice__third::after {
-  border-top-color: #97c95c;
-  border-right-color: rgba(151, 201, 92, calc(100 * (var(--third) - .25)));
-  border-bottom-color: rgba(151, 201, 92, calc(100 * (var(--third) - .5)));
-  border-left-color: rgba(151, 201, 92, calc(100 * (var(--third) - .75)));
-  -webkit-transform: rotate(calc(360deg * var(--third-start) + 45deg + var(--donut-spacing-deg)));
-          transform: rotate(calc(360deg * var(--third-start) + 45deg + var(--donut-spacing-deg)));
-}
+    .donut__slice__third::before {
+      border-top-color: rgba(var(--donut-spacing-color), calc(100 * var(--donut-spacing)));
+      transform: rotate(calc(360deg * var(--third-start) + 45deg));
+    }
 
-.donut__slice__fourth {
-  --fourth-start: calc(var(--first) + var(--second) + var(--third));
-  --fourth-check: max(calc(var(--fourth-start) - .5), 0);
-  -webkit-clip-path: inset(0 calc(50% * (var(--fourth-check) / var(--fourth-check))) 0 0);
-          clip-path: inset(0 calc(50% * (var(--fourth-check) / var(--fourth-check))) 0 0);
-}
+    .donut__slice__third::after {
+      border-top-color: #97c95c;
+      border-right-color: rgba(151, 201, 92, calc(100 * (var(--third) - 0.25)));
+      border-bottom-color: rgba(151, 201, 92, calc(100 * (var(--third) - 0.5)));
+      border-left-color: rgba(151, 201, 92, calc(100 * (var(--third) - 0.75)));
+      transform: rotate(calc(360deg * var(--third-start) + 45deg + var(--donut-spacing-deg)));
+    }
 
-.donut__slice__fourth::before {
-  border-top-color: rgba(var(--donut-spacing-color), calc(100 * var(--donut-spacing)));
-  -webkit-transform: rotate(calc(360deg * var(--fourth-start) + 45deg));
-          transform: rotate(calc(360deg * var(--fourth-start) + 45deg));
-}
+    .donut__slice__fourth {
+      --fourth-start: calc(var(--first) + var(--second) + var(--third));
+      --fourth-check: max(calc(var(--fourth-start) - 0.5), 0);
+      -webkit-clip-path: inset(0 calc(50% * (var(--fourth-check) / var(--fourth-check))) 0 0);
+      clip-path: inset(0 calc(50% * (var(--fourth-check) / var(--fourth-check))) 0 0);
+    }
 
-.donut__slice__fourth::after {
-  border-top-color: #1cb2f6;
-  border-right-color: rgba(28, 178, 246, calc(100 * (var(--fourth) - .25)));
-  border-bottom-color: rgba(28, 178, 246, calc(100 * (var(--fourth) - .5)));
-  border-left-color: rgba(28, 178, 246, calc(100 * (var(--fourth) - .75)));
-  -webkit-transform: rotate(calc(360deg * var(--fourth-start) + 45deg + var(--donut-spacing-deg)));
-          transform: rotate(calc(360deg * var(--fourth-start) + 45deg + var(--donut-spacing-deg)));
-}
+    .donut__slice__fourth::before {
+      border-top-color: rgba(var(--donut-spacing-color), calc(100 * var(--donut-spacing)));
+      transform: rotate(calc(360deg * var(--fourth-start) + 45deg));
+    }
 
-.donut__slice__fifth {
-  --fifth-start: calc(var(--first) + var(--second) + var(--third) + var(--fourth));
-  --fifth-check: max(calc(var(--fifth-start) - .5), 0);
-  -webkit-clip-path: inset(0 calc(50% * (var(--fifth-check) / var(--fifth-check))) 0 0);
-          clip-path: inset(0 calc(50% * (var(--fifth-check) / var(--fifth-check))) 0 0);
-}
+    .donut__slice__fourth::after {
+      border-top-color: #1cb2f6;
+      border-right-color: rgba(28, 178, 246, calc(100 * (var(--fourth) - 0.25)));
+      border-bottom-color: rgba(28, 178, 246, calc(100 * (var(--fourth) - 0.5)));
+      border-left-color: rgba(28, 178, 246, calc(100 * (var(--fourth) - 0.75)));
+      transform: rotate(calc(360deg * var(--fourth-start) + 45deg + var(--donut-spacing-deg)));
+    }
 
-.donut__slice__fifth::before {
-  border-top-color: rgba(var(--donut-spacing-color), calc(100 * var(--donut-spacing)));
-  -webkit-transform: rotate(calc(360deg * var(--fifth-start) + 45deg));
-          transform: rotate(calc(360deg * var(--fifth-start) + 45deg));
-}
+    .donut__slice__fifth {
+      --fifth-start: calc(var(--first) + var(--second) + var(--third) + var(--fourth));
+      --fifth-check: max(calc(var(--fifth-start) - 0.5), 0);
+      -webkit-clip-path: inset(0 calc(50% * (var(--fifth-check) / var(--fifth-check))) 0 0);
+      clip-path: inset(0 calc(50% * (var(--fifth-check) / var(--fifth-check))) 0 0);
+    }
 
-.donut__slice__fifth::after {
-  border-top-color: #1685b8;
-  border-right-color: rgba(22, 133, 184, calc(100 * (var(--fifth) - .25)));
-  border-bottom-color: rgba(22, 133, 184, calc(100 * (var(--fifth) - .5)));
-  border-left-color: rgba(22, 133, 184, calc(100 * (var(--fifth) - .75)));
-  -webkit-transform: rotate(calc(360deg * var(--fifth-start) + 45deg + var(--donut-spacing-deg)));
-          transform: rotate(calc(360deg * var(--fifth-start) + 45deg + var(--donut-spacing-deg)));
-}
+    .donut__slice__fifth::before {
+      border-top-color: rgba(var(--donut-spacing-color), calc(100 * var(--donut-spacing)));
+      transform: rotate(calc(360deg * var(--fifth-start) + 45deg));
+    }
+
+    .donut__slice__fifth::after {
+      border-top-color: #1685b8;
+      border-right-color: rgba(22, 133, 184, calc(100 * (var(--fifth) - 0.25)));
+      border-bottom-color: rgba(22, 133, 184, calc(100 * (var(--fifth) - 0.5)));
+      border-left-color: rgba(22, 133, 184, calc(100 * (var(--fifth) - 0.75)));
+      transform: rotate(calc(360deg * var(--fifth-start) + 45deg + var(--donut-spacing-deg)));
+    }
+
+    .donut__slice__sixth {
+      --sixth-start: calc(var(--first) + var(--second) + var(--third) + var(--fourth) + var(--fifth));
+      --sixth-check: max(calc(var(--sixth-start) - 0.5), 0);
+      -webkit-clip-path: inset(0 calc(50% * (var(--sixth-check) / var(--sixth-check))) 0 0);
+      clip-path: inset(0 calc(50% * (var(--sixth-check) / var(--sixth-check))) 0 0);
+    }
+
+    .donut__slice__sixth::before {
+      border-top-color: rgba(var(--donut-spacing-color), calc(100 * var(--donut-spacing)));
+      transform: rotate(calc(360deg * var(--sixth-start) + 45deg));
+    }
+
+    .donut__slice__sixth::after {
+      border-top-color: #1685b8;
+      border-right-color: rgba(22, 133, 184, calc(100 * (var(--sixth) - 0.25)));
+      border-bottom-color: rgba(22, 133, 184, calc(100 * (var(--sixth) - 0.5)));
+      border-left-color: rgba(22, 133, 184, calc(100 * (var(--sixth) - 0.75)));
+      transform: rotate(calc(360deg * var(--sixth-start) + 45deg + var(--donut-spacing-deg)));
+    }
+
+    .donut__slice__seventh {
+      --seventh-start: calc(var(--first) + var(--second) + var(--third) + var(--fourth) + var(--fifth) + var(--sixth));
+      --seventh-check: max(calc(var(--seventh-start) - 0.5), 0);
+      -webkit-clip-path: inset(0 calc(50% * (var(--seventh-check) / var(--seventh-check))) 0 0);
+      clip-path: inset(0 calc(50% * (var(--seventh-check) / var(--seventh-check))) 0 0);
+    }
+
+    .donut__slice__seventh::before {
+      border-top-color: rgba(var(--donut-spacing-color), calc(100 * var(--donut-spacing)));
+      transform: rotate(calc(360deg * var(--seventh-start) + 45deg));
+    }
+
+    .donut__slice__seventh::after {
+      border-top-color: #1685b8;
+      border-right-color: rgba(22, 133, 184, calc(100 * (var(--seventh) - 0.25)));
+      border-bottom-color: rgba(22, 133, 184, calc(100 * (var(--seventh) - 0.5)));
+      border-left-color: rgba(22, 133, 184, calc(100 * (var(--seventh) - 0.75)));
+      transform: rotate(calc(360deg * var(--seventh-start) + 45deg + var(--donut-spacing-deg)));
+    }
 
     .cover-img {
       display: flex;
@@ -258,12 +307,14 @@
       background: #0E7CCE;
       position: relative;
     }
-    .footer-logo{
+
+    .footer-logo {
       position: absolute;
       left: 68px;
       top: 50%;
       transform: translateY(-50%);
     }
+
     .footer p {
       position: absolute;
       right: 20px;
@@ -306,27 +357,67 @@
   <div class="pdf">
     <div class="page">
       <div class="pdf-title">
-        <h1 class="logo-blue fw-600" style="line-height: 31px;">Your export <br>diagnostic</h1>
+        <h1 class="logo-blue fw-600" style="line-height: 47px;">Your export <br>diagnostic</h1>
       </div>
-      <div class="donut" style="--first: .40; --second: .33; --third: .12; --fourth: .08; --fifth: 0.07">
-        <div class="donut__slice donut__slice__first"></div>
-        <div class="donut__slice donut__slice__second"></div>
-        <div class="donut__slice donut__slice__third"></div>
-        <div class="donut__slice donut__slice__fourth"></div>
-        <div class="donut__slice donut__slice__fifth"></div>
+      <div class="donut"
+        style="--first: .14; --second: .14; --third: .14; --fourth: .14; --fifth: .14; --sixth: .14; --seventh: .14; --donut-spacing: 2;">
+        <div class="donut__slice donut__slice__item donut__slice__first">
+          <div class="score-wrap">
+            <h3 class="fw-600">34%</h3>
+            <h4 class="fw-500">hello</h4>
+          </div>
+        </div>
+        <div class="donut__slice donut__slice__item donut__slice__second">
+          <div class="score-wrap">
+            <h3 class="fw-600">34%</h3>
+            <h4 class="fw-500">hello</h4>
+
+          </div>
+        </div>
+        <div class="donut__slice donut__slice__item donut__slice__third">
+          <div class="score-wrap">
+            <h3 class="fw-600">34%</h3>
+            <h4 class="fw-500">hello</h4>
+
+          </div>
+        </div>
+        <div class="donut__slice donut__slice__item donut__slice__fourth">
+          <div class="score-wrap">
+            <h3 class="fw-600">34%</h3>
+            <h4 class="fw-500">hello</h4>
+
+          </div>
+        </div>
+        <div class="donut__slice donut__slice__item donut__slice__fifth">
+          <div class="score-wrap">
+            <h3 class="fw-600">34%</h3>
+            <h4 class="fw-500">hello</h4>
+
+          </div>
+        </div>
+        <div class="donut__slice donut__slice__item donut__slice__sixth">
+          <div class="score-wrap">
+            <h3 class="fw-600">34%</h3>
+            <h4 class="fw-500">hello</h4>
+
+          </div>
+        </div>
+        <div class="donut__slice donut__slice__item donut__slice__seventh">
+          <div class="score-wrap">
+            <h3 class="fw-600">34%</h3>
+            <h4 class="fw-500">hello</h4>
+
+          </div>
+        </div>
         <div class="donut__label">
-          <div class="donut__label__heading logo-blue">
+          <div class="donut__label__heading fw-600" style="margin-bottom: 8px;">
             54%
           </div>
-          <div class="donut__label__sub">
+          <div class="donut__label__sub gray fw-700" style="font-size: 12px;">
             You are 54% ready to generate your first million Euros in sales or more
           </div>
         </div>
       </div>
-      <div class="cover-img">
-        <img src="./images/page5-bg.png" alt="" style="max-width: 100%;object-fit: cover;height: 100%;">
-      </div>
-
       <div class="footer">
         <div class="footer-logo">
           <img src="./images/footer-logo.svg">
