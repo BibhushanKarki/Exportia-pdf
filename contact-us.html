@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="//db.onlinewebfonts.com/c/c8525944e21c08b9ef6b8f945d240bd4?family=Brevia" rel="stylesheet"
+    type="text/css" />
+  <link href="//db.onlinewebfonts.com/c/1ae9b9868bd3121e932225b140a839a5?family=Verdana" rel="stylesheet"
+    type="text/css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+  <title>Exportia</title>
+  <style>
+    body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      font-family: "Verdana";
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -moz-box-sizing: border-box;
+    }
+
+    .pdf {
+      display: flex;
+      justify-content: center;
+    }
+
+    .page {
+      width: 210mm;
+      min-height: 100%;
+      background: #F6F9FC;
+      background-image: url('./images/contact-bg.png');
+      background-position: bottom;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-blend-mode: darken;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "Brevia";
+    }
+
+    .fw-500 {
+      font-weight: 500;
+    }
+
+    .fw-600 {
+      font-weight: 600;
+    }
+
+    .fw-700 {
+      font-weight: 700;
+    }
+
+    .logo-blue {
+      color: #0090D6;
+    }
+
+    .gray {
+      color: #4F4F4F;
+    }
+
+    .logo-wrapper,.pdf-title{
+      text-align: center;
+    }
+    .logo-wrapper{
+      margin-top: 47px;
+      margin-bottom: 12px;
+    }
+
+    .pdf-title h1 {
+      font-size: 30px;
+    }
+
+    .cover-img {
+      display: flex;
+    }
+
+    .contact-us {
+      max-width: 395px;
+      height: auto;
+      background: #FFFFFF;
+      box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.15);
+      border-radius: 8px;
+      padding: 27px 14px 20px 30px;
+      margin: 0 auto;
+      margin-bottom: 37px;
+    }
+
+    .contact-us p {
+      font-size: 12px;
+    }
+    ul{
+      margin-left: 10px;
+    }
+    li{
+      margin-bottom: 10px;
+    }
+    li::marker{
+      color: #0090D6;
+      font-size: 14px;
+    }
+    a{
+      width: 132px;
+      height: 40px;
+      text-decoration: none;
+      font-size: 12px;
+      background: #F27251;
+      font-family: 'Brevia';
+      border-radius: 2px;
+      color: white;
+      border: none;
+      padding: 8px 33px;
+    }
+    .footer {
+      display: flex;
+      align-items: center;
+      height: 33px;
+      background: #0E7CCE;
+      position: relative;
+    }
+
+    .footer-logo {
+      position: absolute;
+      left: 68px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .footer p {
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .footer span {
+      position: absolute;
+      left: 68px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    @page {
+      size: A4;
+      margin: 0;
+    }
+
+    @media print {
+
+      html,
+      body {
+        width: 210mm;
+        height: 297mm;
+      }
+
+      .page {
+        margin: 0;
+        width: initial;
+        min-height: initial;
+        background: initial;
+        page-break-after: always;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="pdf">
+    <div class="page">
+      <div class="logo-wrapper">
+        <img src="./images/logo.png" alt="">
+      </div>
+      <div class="pdf-title">
+        <h1 class="logo-blue fw-600" style="line-height: 40px;">Do you want to generate your <br> first million €uros in
+          sales?
+        </h1>
+      </div>
+      <div class="contact-us">
+        <p class="gray" style="font-size: 12px;margin-bottom: 20px;">We can help! At Exportia, we are an outsourced European Sales &
+          Marketing team. Our objective is to generate your first million Euros in Sales. For more than a decade we have
+          successfully taken close to hundred companies to Europe. We accelerate sales and reduce your risk along the
+          way. </p>
+          <p style="margin-bottom: 8px;">This is how we help companies like yours succeed in Europe:</p>
+          
+
+       
+        <ul>
+          <li class="gray" style="font-size: 12px;">We select the <b>right European country</b> for your business.
+          </li>
+
+          <li class="gray" style="font-size: 12px;">We set up <b>distribution channels Europe-wide.</b> We select your
+            distributors, secure them, train and activate them, setting-up their KPIs and managing their performance.
+          </li>
+          <li class="gray" style="font-size: 12px;">We generate your <b>first leads.</b> We put you in front of your first European clients and <b>convert leads into sales.</b>
+          </li>
+          <li class="gray" style="font-size: 12px;">When you are ready, we help you <b>recruit your on the ground sales team</b>, we train them, and get them up to speed with your product and sales method. We manage your sales team and then help you appoint a local management team.
+
+          </li>
+        </ul>
+        <p class="gray" style="font-size: 12px;">In essence, we help you scale your business across Europe using our Europe-based multilingual sales <br> team. 
+        </p>
+        <p class="gray" style="font-size: 12px;margin-bottom: 25px;">Contact us today to set-up a 30-minute-call to assess what your next steps could be.
+        </p>
+        <a href="#">Contact us</a>
+      </div>
+      <div class="footer">
+        <div class="footer-logo">
+          <img src="./images/footer-logo.svg">
+        </div>
+        <p style="color: white;font-size: 10px;">Generate your first million Euros in Sales </p>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
