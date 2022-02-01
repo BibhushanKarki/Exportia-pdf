@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="//db.onlinewebfonts.com/c/c8525944e21c08b9ef6b8f945d240bd4?family=Brevia" rel="stylesheet" type="text/css"/> 
+  <link href="//db.onlinewebfonts.com/c/1ae9b9868bd3121e932225b140a839a5?family=Verdana" rel="stylesheet" type="text/css"/> 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet"> 
+  <title>Exportia</title>
+  <style>
+    body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Verdana";
+    }
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        -moz-box-sizing: border-box;
+    }
+    .pdf{
+      display:flex;
+      justify-content: center;
+    }
+    .page {
+        width: 210mm;
+        min-height: 100%;
+        background: #F6F9FC;
+        background-image: url('./images/page6-bg.png');
+        background-position: bottom;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-blend-mode: darken;
+    }
+    h1,h2,h3,h4,h5,h6{
+      font-family: "Brevia";
+    }
+    .fw-500{
+      font-weight: 500;
+    }
+    .fw-600{
+      font-weight: 600;
+    }
+    .fw-700{
+      font-weight: 700;
+    }
+    .logo-blue{
+      color:#0090D6;
+    }
+    .dark-blue{
+      color: #00487D;
+    }
+    .gray{
+      color: #4F4F4F;
+    }
+    .pdf-title{
+      text-align: center;
+    }
+    .pdf-title{
+      margin-bottom: 18px;
+      margin-top: 51px;
+    }
+    .pdf-title h1{
+      font-size: 30px;
+    }
+    .cover-img{
+      display: flex;
+    }
+    .card{
+      max-width: 450px;
+      height: auto;
+      background: #FFFFFF;
+      box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.15);
+      border-radius: 8px;
+      padding: 17px 57px 27px 17px;
+      margin: 0 auto;
+      margin-bottom: 10px;
+    }
+    .page .card:nth-child(5){
+      margin-bottom: 25px;
+    }
+    .card-title{
+      display: flex;
+      margin-bottom: 21px;
+    }
+    .card p{
+      font-size: 12px;
+    }
+    .checkbox-item{
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 14px;
+    }
+    .checkbox-item p{
+      margin-left: 20px;
+      
+      font-size: 10px;
+    }
+    li::marker{
+      color: #0090D6;width: 8px !important; height: 8px;
+    }
+    .footer{
+      display: flex;
+      align-items: center;
+      height: 33px;
+      background: #0E7CCE;
+      position: relative;
+    }
+    .footer-logo{
+      position: absolute;
+      left: 68px;
+      max-height:22px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .footer p{
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .footer span{
+      position: absolute;
+      left: 68px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    @page {
+        size: A4;
+        margin: 0;
+    }
+    @media print {
+    html,
+    body {
+      width: 210mm;
+      height: 297mm;
+    }
+    .page {
+      margin: 0;
+      width: initial;
+      min-height: initial;
+      background: initial;
+      page-break-after: always;
+    }
+    }
+  </style>
+</head>
+<body>
+  <div class="pdf">
+    <div class="page">
+      <div class="pdf-title">
+        <h1 class="logo-blue fw-600" style="line-height: 40px;">Your personalised to do list</h1>
+        <p>Tick off the boxes as you do the list of actions</p>
+      </div>
+      <div class="card">
+        <div class="card-title">
+          <div class="title-img"><img src="./images/marketing.png" alt="" width="20" height="20"></div>
+          <h4 class="fw-600 dark-blue" style="font-size: 18px;margin-left: 20px;">Marketing</h4>
+        </div>
+        <div class="checkbox-list">
+          <div class="checkbox-item">
+            <img src="./images/checkbox.png" alt="">
+            <p class="gray">Ensure awards are displayed on your website.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">
+          <div class="title-img"><img src="./images/leads.png" alt="" width="20" height="20"></div>
+          <h4 class="fw-600 dark-blue" style="font-size: 18px;margin-left: 20px;">Leads & customers</h4>
+        </div>
+        <div class="checkbox-list">
+          <div class="checkbox-item">
+            <img src="./images/checkbox.png" alt="">
+            <p class="gray">Ideally you want to be able to highlight how you solve
+              problems for a specific industry in a case study. Even if
+              the case study does not come from a European market,
+              it is great to have a few.</p>
+          </div>
+          <div class="checkbox-item">
+            <img src="./images/checkbox.png" alt="">
+            <p class="gray">Develop 1 or 2 case studies. Use the same framework for
+              it: Your client company profile (size, industry); Situation
+              before they used your product; Situation after; Main
+              benefits; A photo. You can do it in a video format.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">
+          <div class="title-img"><img src="./images/country.png" alt="" width="20" height="20"></div>
+          <h4 class="fw-600 dark-blue" style="font-size: 18px;margin-left: 20px;">Country</h4>
+        </div>
+        <div class="checkbox-list">
+          <div class="checkbox-item">
+            <img src="./images/checkbox.png" alt="">
+            <p class="gray">Great now, check with Google Analytics in which country
+              your product or service is popular. It will be interesting to
+              use this information down the track.</p>
+          </div>
+          <div class="checkbox-item">
+            <img src="./images/checkbox.png" alt="">
+            <p class="gray">Identify a major trade show in Europe.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">
+          <div class="title-img"><img src="./images/dashboard.png" alt="" width="20" height="20"></div>
+          <h4 class="fw-600 dark-blue" style="font-size: 18px;margin-left: 20px;">Dashboard</h4>
+        </div>
+        <div class="checkbox-list">
+          <div class="checkbox-item">
+            <img src="./images/checkbox.png" alt="">
+            <p class="gray">Great now, check with Google Analytics in which country
+              your product or service is popular. It will be interesting to
+              use this information down the track.</p>
+          </div>
+          <div class="checkbox-item">
+            <img src="./images/checkbox.png" alt="">
+            <p class="gray">Define an export sales target you want to reach three
+              years from now. Define the export budget that will
+              enable you to reach your three-year goal.</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="footer-logo">
+          <img src="./images/footer-logo.svg">
+        </div>
+        <p style="color: white;font-size: 10px;">Generate your first million Euros in Sales </p>
+      </div>
+    </div>
+  </div>
+  
+</body>
+</html>

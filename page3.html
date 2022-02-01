@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="//db.onlinewebfonts.com/c/c8525944e21c08b9ef6b8f945d240bd4?family=Brevia" rel="stylesheet" type="text/css"/> 
+  <link href="//db.onlinewebfonts.com/c/1ae9b9868bd3121e932225b140a839a5?family=Verdana" rel="stylesheet" type="text/css"/> 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet"> 
+  <title>Exportia</title>
+  <style>
+    body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Verdana";
+    }
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        -moz-box-sizing: border-box;
+    }
+    .pdf{
+      display:flex;
+      justify-content: center;
+    }
+    .page {
+        width: 210mm;
+        min-height: 100%;
+        background: #F6F9FC;
+    }
+    h1,h2,h3,h4,h5,h6{
+      font-family: "Brevia";
+    }
+    .fw-500{
+      font-weight: 500;
+    }
+    .fw-600{
+      font-weight: 600;
+    }
+    .fw-700{
+      font-weight: 700;
+    }
+    .logo-blue{
+      color:#0090D6;
+    }
+    .gray{
+      color: #4F4F4F;
+    }
+    .logo-wrapper,.pdf-title{
+      text-align: center;
+    }
+    .logo-wrapper{
+      margin-top: 47px;
+      margin-bottom: 12px;
+    }
+    .pdf-title{
+      margin-bottom: 18px;
+    }
+    .pdf-title h1{
+      font-size: 30px;
+    }
+    .cover-img{
+      display: flex;
+    }
+    .welcome-card{
+      max-width: 395px;
+      height: auto;
+      background: #FFFFFF;
+      box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.15);
+      border-radius: 8px;
+      padding: 28px 33px 41px 30px;
+      margin: 0 auto;
+      margin-bottom: 25px;
+    }
+    .welcome-card p{
+      font-size: 12px;
+    }
+    /* ul {list-style: none}
+    li::before {content: "•"; color: #0090D6;width: 8px; height: 8px;margin-left: -8px;} */
+    li::marker{
+      color: #0090D6;width: 8px !important; height: 8px;
+    }
+    .footer{
+      display: flex;
+      align-items: center;
+      height: 33px;
+      background: #0E7CCE;
+      position: relative;
+    }
+    .footer-logo{
+      position: absolute;
+      left: 68px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .footer p{
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .footer span{
+      position: absolute;
+      left: 68px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    @page {
+        size: A4;
+        margin: 0;
+    }
+    @media print {
+    html,
+    body {
+      width: 210mm;
+      height: 297mm;
+    }
+    .page {
+      margin: 0;
+      width: initial;
+      min-height: initial;
+      background: initial;
+      page-break-after: always;
+    }
+    }
+  </style>
+</head>
+<body>
+  <div class="pdf">
+    <div class="page">
+      <div class="logo-wrapper">
+        <img src="./images/logo.png" alt="">
+      </div>
+      <div class="pdf-title">
+        <h1 class="logo-blue fw-600" style="line-height: 40px;">Are you ready to generate your <br> first million Euros in sales</h1>
+      </div>
+      <div class="welcome-card">
+        <p class="fw-700" style="color:#F27251;text-align: center;font-size: 14px;">Congratulations on completing your <br> Export Readiness Diagnostic!</p>
+        <br>
+           <p class="gray fw-600" style="font-size: 12px;line-height: 16.2px;font-family: Brevia;margin-bottom: 20px;">Find out now in your report! Discover your score and strengths & weaknesses in the Exportia 7 mission critical pillars, that are essential to your success in Europe. Your report will provide you with: </p> 
+           
+          <ul>
+            <li class="gray" style="font-size: 12px;">A personalised To Do list for you to take action right here, right now! 
+            </li>
+            <br>
+            <li class="gray" style="font-size: 12px;">A tailored evaluation and feedback: where you performed well, where some work needs to be done, and where you need to act now.
+            </li>
+            <br>
+            <li class="gray" style="font-size: 12px;">You will also find inspiration in reading our benchmark, where we take you through the best practices of successful exporters in Europe. </li>
+          </ul>
+            
+        </p>
+      </div>
+      <div class="cover-img">
+        <img src="./images/page3-bg.png" alt="" style="max-width: 100%;object-fit: cover;height: 100%;">
+      </div>
+      <div class="footer">
+        <div class="footer-logo">
+          <img src="./images/footer-logo.svg">
+        </div>
+        <p style="color: white;font-size: 10px;">Generate your first million Euros in Sales </p>
+      </div>
+    </div>
+  </div>
+  
+</body>
+</html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="//db.onlinewebfonts.com/c/c8525944e21c08b9ef6b8f945d240bd4?family=Brevia" rel="stylesheet" type="text/css"/> 
+  <link href="//db.onlinewebfonts.com/c/1ae9b9868bd3121e932225b140a839a5?family=Verdana" rel="stylesheet" type="text/css"/> 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Exportia</title>
+  <style>
+    body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Verdana";
+    }
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        -moz-box-sizing: border-box;
+    }
+    .pdf{
+      display:flex;
+      justify-content: center;
+    }
+    .page {
+        width: 210mm;
+        min-height: 100%;
+        background: #F6F9FC;
+    }
+    h1,h2,h3,h4,h5,h6{
+      font-family: "Brevia";
+    }
+    .fw-500{
+      font-weight: 500;
+    }
+    .fw-600{
+      font-weight: 600;
+    }
+    .fw-700{
+      font-weight: 700;
+    }
+    .logo-blue{
+      color:#0090D6;
+    }
+    .dark-blue{
+      color: #00487D;
+    }
+    .gray{
+      color: #4F4F4F;
+    }
+    .pdf-title{
+      text-align: center;
+    }
+    .pdf-title{
+      margin-bottom: 31px;
+      margin-top: 51px;
+    }
+    .pdf-title h1{
+      font-size: 30px;
+    }
+    .star-section{
+      margin-bottom: 226px;
+    }
+    .card{
+      max-width: 475px;
+      max-height: 125px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between  ;
+      background: #FFFFFF;
+      box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.15);
+      border-radius: 8px;
+      padding: 20px 23px 33px 22px;
+      margin: 0 auto;
+      margin-bottom: 10px;
+    }
+    .card .second-col{
+      position: relative;
+      padding-left: 23px;
+    }
+    .card .second-col::before{
+      content: '';
+      height: 84px;
+      border: 0.5px solid #11B2EA;
+      position: absolute;
+      left: 0;
+      opacity: 0.2;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .card .third-col{
+      position: relative;
+      padding-left: 16px;
+    }
+    .card .third-col::before{
+      content: '';
+      height: 84px;
+      border: 0.5px solid #11B2EA;
+      position: absolute;
+      left: 0;
+      opacity: 0.2;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .star-ratings{
+      max-width: 475px;
+      margin:0 auto;
+    }
+    .phrase{
+      margin-bottom: 11px;
+    }
+    .phrase h4{
+      font-size: 18px;
+    }
+    .rating{
+      margin-bottom: 12px;
+    }
+    .star{
+      width: 100%;
+      
+    }
+    .footer{
+      display: flex;
+      align-items: center;
+      height: 33px;
+      background: #0E7CCE;
+      position: relative;
+    }
+    .footer-logo{
+      position: absolute;
+      left: 68px;
+      max-height:22px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .footer p{
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .footer span{
+      position: absolute;
+      left: 68px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    @page {
+        size: A4;
+        margin: 0;
+    }
+    @media print {
+    html,
+    body {
+      width: 210mm;
+      height: 297mm;
+    }
+    .page {
+      margin: 0;
+      width: initial;
+      min-height: initial;
+      background: initial;
+      page-break-after: always;
+    }
+    }
+  </style>
+</head>
+<body>
+  <div class="pdf">
+    <div class="page">
+      <div class="pdf-title">
+        <h1 class="logo-blue fw-600" style="line-height: 40px;">Your team diagnostic</h1>
+      </div>
+      <div class="star-ratings">
+        <div class="star-section">
+          <div class="phrase">
+            <h4 class="dark-blue fw-600">You did really well in these fields</h4>
+          </div>
+          <div class="rating">
+            <img src="./images/filled-star-orange.svg" alt="">
+            <img src="./images/border-star-orange.svg" alt="">
+            <img src="./images/border-star-orange.svg" alt="">
+            <img src="./images/border-star-orange.svg" alt="">
+            <img src="./images/border-star-orange.svg" alt="">
+          </div>
+          <div class="card">
+            <div class="first-col">
+              <h4 class="dark-blue fw-600" style="font-size: 14px;">Number <br> of Employees</h4>
+            </div>
+            <div class="second-col">
+              <p style="font-size: 14px;">1-15</p>
+            </div>
+            <div class="third-col">
+              <p style="font-size: 10px;max-width: 198px;">Exporting to European markets is an
+                intensive exercise in terms of human
+                resources. At this stage, with under 15
+                employees, your company may stretch and be unable to provide fast responses to overseas customers.</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="first-col">
+              <h4 class="dark-blue fw-600" style="font-size: 14px;">In charge of <br> export</h4>
+            </div>
+            <div class="second-col">
+              <p style="font-size: 14px;">CEO</p>
+            </div>
+            <div class="third-col">
+              <p style="font-size: 10px;max-width: 198px;">"It is time for you to do that right now.
+                Identify who is the person who ultimately will have the responsibility to make sure the European clients get the attention they deserve. And you will have the capability and the drive to involve and engage with the rest of the team.</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="first-col">
+              <h4 class="dark-blue fw-600" style="font-size: 14px;">Export team</h4>
+            </div>
+            <div class="second-col">
+              <p style="font-size: 14px;">0</p>
+            </div>
+            <div class="third-col">
+              <p style="font-size: 10px;max-width: 198px;">This is ok, but you need to realise that you will have to engage your entire team to support export development. At Exportia, we have successfully worked with companies with no dedicated export resources, however, these companies had their entire team involved in the export project. It worked! </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer">
+        <div class="footer-logo">
+          <img src="./images/footer-logo.svg">
+        </div>
+        <p style="color: white;font-size: 10px;">Generate your first million Euros in Sales </p>
+      </div>
+    </div>
+  </div>
+  
+</body>
+</html>

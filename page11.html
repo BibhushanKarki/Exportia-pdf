@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="//db.onlinewebfonts.com/c/c8525944e21c08b9ef6b8f945d240bd4?family=Brevia" rel="stylesheet" type="text/css"/> 
+  <link href="//db.onlinewebfonts.com/c/1ae9b9868bd3121e932225b140a839a5?family=Verdana" rel="stylesheet" type="text/css"/> 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet"> 
+  <title>Exportia</title>
+  <style>
+    body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Verdana";
+    }
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        -moz-box-sizing: border-box;
+    }
+    .pdf{
+      display:flex;
+      justify-content: center;
+    }
+    .page {
+        width: 210mm;
+        min-height: 100%;
+        background: #F6F9FC;
+    }
+    h1,h2,h3,h4,h5,h6{
+      font-family: "Brevia";
+    }
+    .fw-500{
+      font-weight: 500;
+    }
+    .fw-600{
+      font-weight: 600;
+    }
+    .fw-700{
+      font-weight: 700;
+    }
+    .logo-blue{
+      color:#0090D6;
+    }
+    .dark-blue{
+      color: #00487D;
+    }
+    .gray{
+      color: #4F4F4F;
+    }
+    .pdf-title{
+      margin-bottom: 26px;
+      text-align: center;
+      margin-top: 41px;
+    }
+    .pdf-title h1{
+      font-size: 30px;
+    }
+    .icon-card{
+      max-width: 475px;
+      height: auto;
+      background: #FFFFFF;
+      box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.15);
+      border-radius: 8px;
+      padding: 10px 25px 20px 28px;
+      margin: 0 auto;
+      margin-bottom: 25px;
+      position: relative;
+    }
+    .icon-card p{
+      font-size: 12px;
+    }
+    li{
+      margin-bottom: 8px;
+    }
+    li::marker{
+      color: #0090D6;
+      font-size: 12px;
+    }
+    .corner-icon{
+      width: 49px;
+      height: 49px;
+      border-radius: 50%;
+      border: 1px solid #F27251;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: -22px;
+      left: -22px;
+      background: white;
+    }
+    /* .corner-icon img{
+
+    } */
+    .footer{
+      display: flex;
+      align-items: center;
+      height: 33px;
+      background: #0E7CCE;
+      position: relative;
+    }
+    .footer-logo{
+      position: absolute;
+      left: 68px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .footer p{
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .footer span{
+      position: absolute;
+      left: 68px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    @page {
+        size: A4;
+        margin: 0;
+    }
+    @media print {
+    html,
+    body {
+      width: 210mm;
+      height: 297mm;
+    }
+    .page {
+      margin: 0;
+      width: initial;
+      min-height: initial;
+      background: initial;
+      page-break-after: always;
+    }
+    }
+  </style>
+</head>
+<body>
+  <div class="pdf">
+    <div class="page">
+      <div class="pdf-title">
+        <h1 class="logo-blue fw-600" style="line-height: 40px;">Best practices</h1>
+        <p class="gray" style="font-size: 12px;max-width: 415px;margin: 0 auto;">Our experience of more than a decade, working with companies in the European market, showed us that implementing these best practices enabled us to reach their first million Euros in sales faster.</p>
+      </div>
+      <div class="icon-card" style="margin-bottom: 46px;">
+        <div class="corner-icon">
+          <img src="./images/product.png" alt="">
+        </div>
+        <h4 class="fw-600 dark-blue" style="font-size: 18px;margin-bottom: 8px;">Team</h4>
+          <ul>
+            <li class="gray" style="font-size: 12px;">High performers in the export field usually have their whole
+              team supporting the European development project. Everybody inthe team has a clear focus on the European market as a target and are aware of the importance of succeeding in the European market & are engaged in the process. 
+            </li>
+            
+            <li class="gray" style="font-size: 12px;">It means that the <b>sales and marketing</b> team need to deliver fast materials: case studies, marketing materials, as well as be available for customer meetings in Europe.
+            </li>
+            
+            <li class="gray" style="font-size: 12px;">The <b>R&D team</b> takes into account feedback from European customers and is really responsive in implementing any quality improvement required. </li>
+            <li class="gray" style="font-size: 12px;">The finance team is across possible financing for export: EMDG, accelerate commercialisation. </li>
+            <li class="gray" style="font-size: 12px;">The <b>operations</b> team has a clear understanding of the best ways to pack and label the products and of the shipping costs as well as being familiar with incoterms</li>
+          </ul>
+            
+        </p>
+      </div>
+      <div class="icon-card" style="margin-bottom: 55px;">
+        <div class="corner-icon">
+          <img src="./images/marketing-icon.png" alt="">
+        </div>
+        <h4 class="fw-600 dark-blue" style="font-size: 18px;margin-bottom: 8px;">Marketing</h4>
+          <ul>
+            <li class="gray" style="font-size: 12px;"><b>IP PROTECTION:</b> High performers usually have lodged a patentor hold a patent in the European Market. They also look at registering a Trademark for their brand. 
+            </li>
+            
+            <li class="gray" style="font-size: 12px;"><b>COMPLIANCE:</b> The product is compliant to European standards.
+            </li>
+            
+            <li class="gray" style="font-size: 12px;"><b>VALIDATED BY THE MARKET:</b> Key clients in the home market, and ideally in Europe, have validated the suitability of the product. Instructions are clear and concise to ease the translation process and make it cost-effective. High performers know they are solving a problem.</li>
+            <li class="gray" style="font-size: 12px;"><b>POSITIONING:</b> The value proposition is clearly articulated in comparison to major competitors, ideally including 
+              European competitors. </li>
+            <li class="gray" style="font-size: 12px;"><b>PRODUCT SUPPORT:</b> A clear and simple troubleshooting and aftersales support process has been defined. A contact person is in charge of analysis and providing solution for any product issue.</li>
+          </ul>
+            
+        </p>
+      </div>
+      <div class="footer">
+        <div class="footer-logo">
+          <img src="./images/footer-logo.svg">
+        </div>
+        <p style="color: white;font-size: 10px;">Generate your first million Euros in Sales </p>
+      </div>
+    </div>
+  </div>
+  
+</body>
+</html>

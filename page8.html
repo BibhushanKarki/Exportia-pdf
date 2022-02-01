@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="//db.onlinewebfonts.com/c/c8525944e21c08b9ef6b8f945d240bd4?family=Brevia" rel="stylesheet" type="text/css"/> 
+  <link href="//db.onlinewebfonts.com/c/1ae9b9868bd3121e932225b140a839a5?family=Verdana" rel="stylesheet" type="text/css"/> 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Exportia</title>
+  <style>
+    body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Verdana";
+    }
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        -moz-box-sizing: border-box;
+    }
+    .pdf{
+      display:flex;
+      justify-content: center;
+    }
+    .page {
+        width: 210mm;
+        min-height: 100%;
+        background: #F6F9FC;
+    }
+    h1,h2,h3,h4,h5,h6{
+      font-family: "Brevia";
+    }
+    .fw-500{
+      font-weight: 500;
+    }
+    .fw-600{
+      font-weight: 600;
+    }
+    .fw-700{
+      font-weight: 700;
+    }
+    .logo-blue{
+      color:#0090D6;
+    }
+    .dark-blue{
+      color: #00487D;
+    }
+    .gray{
+      color: #4F4F4F;
+    }
+    .pdf-title{
+      text-align: center;
+    }
+    .pdf-title{
+      margin-bottom: 31px;
+      margin-top: 51px;
+    }
+    .pdf-title h1{
+      font-size: 30px;
+    }
+    .star-section{
+      margin-bottom: 24px;
+    }
+    .star-section:nth-child(2){
+      margin-bottom: 34px;
+    }
+    .card{
+      max-width: 475px;
+      max-height: 125px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between  ;
+      background: #FFFFFF;
+      box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.15);
+      border-radius: 8px;
+      padding: 20px 23px 33px 22px;
+      margin: 0 auto;
+      margin-bottom: 10px;
+    }
+    .card .second-col{
+      position: relative;
+      padding-left: 23px;
+    }
+    .card .second-col::before{
+      content: '';
+      height: 84px;
+      border: 0.5px solid #11B2EA;
+      position: absolute;
+      left: 0;
+      opacity: 0.2;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .card .second-col.short-wick::before{
+      height: 64px;
+    }
+    .card .second-col.long-wick::before{
+      height: 114px;
+    }
+    .card .third-col{
+      position: relative;
+      padding-left: 16px;
+    }
+    .card .third-col::before{
+      content: '';
+      height: 84px;
+      border: 0.5px solid #11B2EA;
+      position: absolute;
+      left: 0;
+      opacity: 0.2;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .card .third-col.short-wick::before{
+      height: 64px;
+    }
+    .card .third-col.long-wick::before{
+      height: 114px;
+    }
+    .star-ratings{
+      max-width: 475px;
+      margin:0 auto;
+    }
+    .phrase{
+      margin-bottom: 11px;
+    }
+    .phrase h4{
+      font-size: 18px;
+    }
+    .rating{
+      margin-bottom: 12px;
+    }
+    .star{
+      width: 100%;
+      
+    }
+    .footer{
+      display: flex;
+      align-items: center;
+      height: 33px;
+      background: #0E7CCE;
+      position: relative;
+    }
+    .footer-logo{
+      position: absolute;
+      left: 68px;
+      max-height:22px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .footer p{
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .footer span{
+      position: absolute;
+      left: 68px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    @page {
+        size: A4;
+        margin: 0;
+    }
+    @media print {
+    html,
+    body {
+      width: 210mm;
+      height: 297mm;
+    }
+    .page {
+      margin: 0;
+      width: initial;
+      min-height: initial;
+      background: initial;
+      page-break-after: always;
+    }
+    }
+  </style>
+</head>
+<body>
+  <div class="pdf">
+    <div class="page">
+      <div class="pdf-title">
+        <h1 class="logo-blue fw-600" style="line-height: 40px;">Your team diagnostic</h1>
+      </div>
+      <div class="star-ratings">
+        <div class="star-section">
+          <div class="phrase">
+            <h4 class="dark-blue fw-600">You did really well in these fields</h4>
+          </div>
+          <div class="rating">
+            <img src="./images/filled-star-dark.svg" alt="">
+            <img src="./images/filled-star-dark.svg" alt="">
+            <img src="./images/filled-star-dark.svg" alt="">
+            <img src="./images/filled-star-dark.svg" alt="">
+            <img src="./images/filled-star-dark.svg" alt="">
+          </div>
+          <div class="card">
+            <div class="first-col">
+              <h4 class="dark-blue fw-600" style="font-size: 14px;">In charge of <br> customer <br> enquiries</h4>
+            </div>
+            <div class="second-col short-wick">
+              <p style="font-size: 14px;">I can <br> name that <br> person</p>
+            </div>
+            <div class="third-col short-wick">
+              <p style="font-size: 10px;max-width: 198px;">That is a great step to have somebody
+                engaged and responsible for giving great
+                customer service to European clients. </p>
+            </div>
+          </div>
+        </div>
+        <div class="star-section">
+          <div class="phrase">
+            <h4 class="dark-blue fw-600">Some work still needs to be done in <br> these areas</h4>
+          </div>
+          <div class="rating">
+            <img src="./images/filled-star-light.svg" alt="">
+            <img src="./images/filled-star-light.svg" alt="">
+            <img src="./images/filled-star-light.svg" alt="">
+            <img src="./images/border-star-light.svg" alt="">
+            <img src="./images/border-star-light.svg" alt="">
+          </div>
+          <div class="card" style="max-height: 149px;padding-bottom: 12px;">
+            <div class="first-col">
+              <h4 class="dark-blue fw-600" style="font-size: 14px;">Number of <br> sales persons</h4>
+            </div>
+            <div class="second-col long-wick">
+              <p style="font-size: 14px;">1</p>
+            </div>
+            <div class="third-col long-wick">
+              <p style="font-size: 10px;max-width: 198px;">It's great that you already have a sales team for your domestic market. It will be very useful to have their feedback and get their insight on the low hanging fruits. It means you would already have had identified the best customers for your business and what makes them buy your product. You can definitively use that to grow your export business. </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="first-col">
+              <h4 class="dark-blue fw-600" style="font-size: 14px;">Marketing team</h4>
+            </div>
+            <div class="second-col">
+              <p style="font-size: 14px;">1</p>
+            </div>
+            <div class="third-col">
+              <p style="font-size: 10px;max-width: 198px;">It's great that you have an allocated
+                resource, that person may stretch to cater for your local market and your overseas markets. Therefore she/he may need some external help occasionally.</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="first-col">
+              <h4 class="dark-blue fw-600" style="font-size: 14px;">R&D Team</h4>
+            </div>
+            <div class="second-col">
+              <p style="font-size: 14px;">1</p>
+            </div>
+            <div class="third-col">
+              <p style="font-size: 10px;max-width: 198px;">This is good this R&D team will need to
+                take into account, filter and decide to act
+                upon, market feedback that will come from the European market. Europeans may have different needs, or they may be used to features you have not thought about. </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer">
+        <div class="footer-logo">
+          <img src="./images/footer-logo.svg">
+        </div>
+        <p style="color: white;font-size: 10px;">Generate your first million Euros in Sales </p>
+      </div>
+    </div>
+  </div>
+  
+</body>
+</html>

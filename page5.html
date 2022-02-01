@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="//db.onlinewebfonts.com/c/c8525944e21c08b9ef6b8f945d240bd4?family=Brevia" rel="stylesheet"
+    type="text/css" />
+  <link href="//db.onlinewebfonts.com/c/1ae9b9868bd3121e932225b140a839a5?family=Verdana" rel="stylesheet"
+    type="text/css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+  <title>Exportia</title>
+  <style>
+    body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      font-family: "Verdana";
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -moz-box-sizing: border-box;
+    }
+
+    .pdf {
+      display: flex;
+      justify-content: center;
+    }
+
+    .page {
+      width: 210mm;
+      min-height: 100%;
+      background: #ffffff;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "Brevia";
+    }
+
+    .fw-500 {
+      font-weight: 500;
+    }
+
+    .fw-600 {
+      font-weight: 600;
+    }
+
+    .fw-700 {
+      font-weight: 700;
+    }
+
+    .logo-blue {
+      color: #0090D6;
+    }
+
+    .gray {
+      color: #4F4F4F;
+    }
+
+    .pdf-title {
+      margin-bottom: 29px;
+      margin-top: 90px;
+      text-align: center;
+    }
+
+    .pdf-title h1 {
+      font-size: 30px;
+    }
+
+    /* circle fragments css */
+    .donut {
+  --donut-size: 350px;
+  --donut-border-width: 40px;
+  --donut-spacing: 0;
+  --donut-spacing-color: 255, 255, 255;
+  --donut-spacing-deg: calc(1deg * var(--donut-spacing));
+  border-radius: 50%;
+  height: var(--donut-size);
+  margin: 0 auto;
+  position: relative;
+  width: var(--donut-size);
+}
+
+.donut__label {
+  left: 50%;
+  line-height: 1.5;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 80%;
+}
+
+.donut__label__heading {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.donut__label__sub {
+  color: #666666;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+}
+
+.donut__slice {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+.donut__slice::before,
+.donut__slice::after {
+  border: var(--donut-border-width) solid rgba(0, 0, 0, 0);
+  border-radius: 50%;
+  content: '';
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  width: 100%;
+}
+
+.donut__slice::before {
+  border-width: calc(var(--donut-border-width) + 1px);
+  box-shadow: 0 0 1px 0 rgba(var(--donut-spacing-color), calc(100 * var(--donut-spacing)));
+}
+
+.donut__slice__first {
+  --first-start: 0;
+}
+
+.donut__slice__first::before {
+  border-top-color: rgba(var(--donut-spacing-color), calc(100 * var(--donut-spacing)));
+  -webkit-transform: rotate(calc(360deg * var(--first-start) + 45deg));
+          transform: rotate(calc(360deg * var(--first-start) + 45deg));
+}
+
+.donut__slice__first::after {
+  border-top-color: #ff6838;
+  border-right-color: rgba(255, 104, 56, calc(100 * (var(--first) - .25)));
+  border-bottom-color: rgba(255, 104, 56, calc(100 * (var(--first) - .5)));
+  border-left-color: rgba(255, 104, 56, calc(100 * (var(--first) - .75)));
+  -webkit-transform: rotate(calc(360deg * var(--first-start) + 45deg + var(--donut-spacing-deg)));
+          transform: rotate(calc(360deg * var(--first-start) + 45deg + var(--donut-spacing-deg)));
+}
+
+.donut__slice__second {
+  --second-start: calc(var(--first));
+  --second-check: max(calc(var(--second-start) - .5), 0);
+  -webkit-clip-path: inset(0 calc(50% * (var(--second-check) / var(--second-check))) 0 0);
+          clip-path: inset(0 calc(50% * (var(--second-check) / var(--second-check))) 0 0);
+}
+
+.donut__slice__second::before {
+  border-top-color: rgba(var(--donut-spacing-color), calc(100 * var(--donut-spacing)));
+  -webkit-transform: rotate(calc(360deg * var(--second-start) + 45deg));
+          transform: rotate(calc(360deg * var(--second-start) + 45deg));
+}
+
+.donut__slice__second::after {
+  border-top-color: #ffc820;
+  border-right-color: rgba(255, 200, 32, calc(100 * (var(--second) - .25)));
+  border-bottom-color: rgba(255, 200, 32, calc(100 * (var(--second) - .5)));
+  border-left-color: rgba(255, 200, 32, calc(100 * (var(--second) - .75)));
+  -webkit-transform: rotate(calc(360deg * var(--second-start) + 45deg + var(--donut-spacing-deg)));
+          transform: rotate(calc(360deg * var(--second-start) + 45deg + var(--donut-spacing-deg)));
+}
+
+.donut__slice__third {
+  --third-start: calc(var(--first) + var(--second));
+  --third-check: max(calc(var(--third-start) - .5), 0);
+  -webkit-clip-path: inset(0 calc(50% * (var(--third-check) / var(--third-check))) 0 0);
+          clip-path: inset(0 calc(50% * (var(--third-check) / var(--third-check))) 0 0);
+}
+
+.donut__slice__third::before {
+  border-top-color: rgba(var(--donut-spacing-color), calc(100 * var(--donut-spacing)));
+  -webkit-transform: rotate(calc(360deg * var(--third-start) + 45deg));
+          transform: rotate(calc(360deg * var(--third-start) + 45deg));
+}
+
+.donut__slice__third::after {
+  border-top-color: #97c95c;
+  border-right-color: rgba(151, 201, 92, calc(100 * (var(--third) - .25)));
+  border-bottom-color: rgba(151, 201, 92, calc(100 * (var(--third) - .5)));
+  border-left-color: rgba(151, 201, 92, calc(100 * (var(--third) - .75)));
+  -webkit-transform: rotate(calc(360deg * var(--third-start) + 45deg + var(--donut-spacing-deg)));
+          transform: rotate(calc(360deg * var(--third-start) + 45deg + var(--donut-spacing-deg)));
+}
+
+.donut__slice__fourth {
+  --fourth-start: calc(var(--first) + var(--second) + var(--third));
+  --fourth-check: max(calc(var(--fourth-start) - .5), 0);
+  -webkit-clip-path: inset(0 calc(50% * (var(--fourth-check) / var(--fourth-check))) 0 0);
+          clip-path: inset(0 calc(50% * (var(--fourth-check) / var(--fourth-check))) 0 0);
+}
+
+.donut__slice__fourth::before {
+  border-top-color: rgba(var(--donut-spacing-color), calc(100 * var(--donut-spacing)));
+  -webkit-transform: rotate(calc(360deg * var(--fourth-start) + 45deg));
+          transform: rotate(calc(360deg * var(--fourth-start) + 45deg));
+}
+
+.donut__slice__fourth::after {
+  border-top-color: #1cb2f6;
+  border-right-color: rgba(28, 178, 246, calc(100 * (var(--fourth) - .25)));
+  border-bottom-color: rgba(28, 178, 246, calc(100 * (var(--fourth) - .5)));
+  border-left-color: rgba(28, 178, 246, calc(100 * (var(--fourth) - .75)));
+  -webkit-transform: rotate(calc(360deg * var(--fourth-start) + 45deg + var(--donut-spacing-deg)));
+          transform: rotate(calc(360deg * var(--fourth-start) + 45deg + var(--donut-spacing-deg)));
+}
+
+.donut__slice__fifth {
+  --fifth-start: calc(var(--first) + var(--second) + var(--third) + var(--fourth));
+  --fifth-check: max(calc(var(--fifth-start) - .5), 0);
+  -webkit-clip-path: inset(0 calc(50% * (var(--fifth-check) / var(--fifth-check))) 0 0);
+          clip-path: inset(0 calc(50% * (var(--fifth-check) / var(--fifth-check))) 0 0);
+}
+
+.donut__slice__fifth::before {
+  border-top-color: rgba(var(--donut-spacing-color), calc(100 * var(--donut-spacing)));
+  -webkit-transform: rotate(calc(360deg * var(--fifth-start) + 45deg));
+          transform: rotate(calc(360deg * var(--fifth-start) + 45deg));
+}
+
+.donut__slice__fifth::after {
+  border-top-color: #1685b8;
+  border-right-color: rgba(22, 133, 184, calc(100 * (var(--fifth) - .25)));
+  border-bottom-color: rgba(22, 133, 184, calc(100 * (var(--fifth) - .5)));
+  border-left-color: rgba(22, 133, 184, calc(100 * (var(--fifth) - .75)));
+  -webkit-transform: rotate(calc(360deg * var(--fifth-start) + 45deg + var(--donut-spacing-deg)));
+          transform: rotate(calc(360deg * var(--fifth-start) + 45deg + var(--donut-spacing-deg)));
+}
+
+    .cover-img {
+      display: flex;
+    }
+
+    .footer {
+      display: flex;
+      align-items: center;
+      height: 33px;
+      background: #0E7CCE;
+      position: relative;
+    }
+    .footer-logo{
+      position: absolute;
+      left: 68px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .footer p {
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .footer span {
+      position: absolute;
+      left: 68px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    @page {
+      size: A4;
+      margin: 0;
+    }
+
+    @media print {
+
+      html,
+      body {
+        width: 210mm;
+        height: 297mm;
+      }
+
+      .page {
+        margin: 0;
+        width: initial;
+        min-height: initial;
+        background: initial;
+        page-break-after: always;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="pdf">
+    <div class="page">
+      <div class="pdf-title">
+        <h1 class="logo-blue fw-600" style="line-height: 31px;">Your export <br>diagnostic</h1>
+      </div>
+      <div class="donut" style="--first: .40; --second: .33; --third: .12; --fourth: .08; --fifth: 0.07">
+        <div class="donut__slice donut__slice__first"></div>
+        <div class="donut__slice donut__slice__second"></div>
+        <div class="donut__slice donut__slice__third"></div>
+        <div class="donut__slice donut__slice__fourth"></div>
+        <div class="donut__slice donut__slice__fifth"></div>
+        <div class="donut__label">
+          <div class="donut__label__heading logo-blue">
+            54%
+          </div>
+          <div class="donut__label__sub">
+            You are 54% ready to generate your first million Euros in sales or more
+          </div>
+        </div>
+      </div>
+      <div class="cover-img">
+        <img src="./images/page5-bg.png" alt="" style="max-width: 100%;object-fit: cover;height: 100%;">
+      </div>
+
+      <div class="footer">
+        <div class="footer-logo">
+          <img src="./images/footer-logo.svg">
+        </div>
+        <p style="color: white;font-size: 10px;">Generate your first million Euros in Sales </p>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

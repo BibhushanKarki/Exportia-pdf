@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="//db.onlinewebfonts.com/c/c8525944e21c08b9ef6b8f945d240bd4?family=Brevia" rel="stylesheet" type="text/css"/> 
+  <link href="//db.onlinewebfonts.com/c/1ae9b9868bd3121e932225b140a839a5?family=Verdana" rel="stylesheet" type="text/css"/> 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet"> 
+  <title>Exportia</title>
+  <style>
+    body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Verdana";
+    }
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        -moz-box-sizing: border-box;
+    }
+    .pdf{
+      display:flex;
+      justify-content: center;
+    }
+    .page {
+        width: 210mm;
+        min-height: 100%;
+        background: #F6F9FC;
+        background-image: url('./images/page6-bg.png');
+        background-position: bottom;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-blend-mode: darken;
+    }
+    h1,h2,h3,h4,h5,h6{
+      font-family: "Brevia";
+    }
+    .fw-500{
+      font-weight: 500;
+    }
+    .fw-600{
+      font-weight: 600;
+    }
+    .fw-700{
+      font-weight: 700;
+    }
+    .logo-blue{
+      color:#0090D6;
+    }
+    .dark-blue{
+      color: #00487D;
+    }
+    .gray{
+      color: #4F4F4F;
+    }
+    .pdf-title{
+      text-align: center;
+    }
+    .pdf-title{
+      margin-bottom: 18px;
+      margin-top: 51px;
+    }
+    .pdf-title h1{
+      font-size: 30px;
+    }
+    .cover-img{
+      display: flex;
+    }
+    .card{
+      max-width: 450px;
+      height: auto;
+      background: #FFFFFF;
+      box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.15);
+      border-radius: 8px;
+      padding: 17px 57px 27px 17px;
+      margin: 0 auto;
+      margin-bottom: 10px;
+    }
+    .page .card:nth-child(3){
+      margin-bottom: 25px;
+    }
+    .card-title{
+      display: flex;
+      margin-bottom: 21px;
+    }
+    .card p{
+      font-size: 12px;
+    }
+    .checkbox-item{
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 14px;
+    }
+    .checkbox-item p{
+      margin-left: 20px;
+      
+      font-size: 10px;
+    }
+    li::marker{
+      color: #0090D6;width: 8px !important; height: 8px;
+    }
+    .footer{
+      display: flex;
+      align-items: center;
+      height: 33px;
+      background: #0E7CCE;
+      position: relative;
+    }
+    .footer-logo{
+      position: absolute;
+      left: 68px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .footer p{
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .footer span{
+      position: absolute;
+      left: 68px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    @page {
+        size: A4;
+        margin: 0;
+    }
+    @media print {
+    html,
+    body {
+      width: 210mm;
+      height: 297mm;
+    }
+    .page {
+      margin: 0;
+      width: initial;
+      min-height: initial;
+      background: initial;
+      page-break-after: always;
+    }
+    }
+  </style>
+</head>
+<body>
+  <div class="pdf">
+    <div class="page">
+      <div class="pdf-title">
+        <h1 class="logo-blue fw-600" style="line-height: 40px;">Your personalised to do list</h1>
+        <p>Tick off the boxes as you do the list of actions</p>
+      </div>
+      <div class="card">
+        <div class="card-title">
+          <div class="title-img"><img src="./images/product.png" alt="" width="20" height="20"></div>
+          <h4 class="fw-600 dark-blue" style="font-size: 18px;margin-left: 20px;">Product</h4>
+        </div>
+        <div class="checkbox-list">
+          <div class="checkbox-item">
+            <img src="./images/checkbox.png" alt="">
+            <p class="gray">Identify the product with the most potential in your range for Europe. <br> 
+              Contact us if you need someassistance in this process. We have developed specific packages for this matter.</p>
+          </div>
+          <div class="checkbox-item">
+            <img src="./images/checkbox.png" alt="">
+            <p class="gray">Study your competitors pricing in Europe. Prepare your
+              differentiation points, it can be after sales, quality,
+              product warranty, flexibility, you name it! Find out
+              where your European competition come from and in
+              which countries they are active.</p>
+          </div>
+          <div class="checkbox-item">
+            <img src="./images/checkbox.png" alt="">
+            <p class="gray">Test if the market will accept your delivery times and
+              costs before signing up for any third-party warehousing and logistics in Europe. Evaluate several European logistics and warehousing providers if your clients refuse to buy if you don't have a stock in Europe. Manufacturing under licence in Europe is a very big undertaking and requires specialist advice, the business model should make sense. Your Intellectual property
+              should be careful watched if you investigate this option.</p>
+          </div>
+          <div class="checkbox-item">
+            <img src="./images/checkbox.png" alt="">
+            <p class="gray">Check European regulations and initiatives in regards to
+              your product, solution or service.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">
+          <div class="title-img"><img src="./images/sales.png" alt="" width="20" height="20"></div>
+          <h4 class="fw-600 dark-blue" style="font-size: 18px;margin-left: 20px;">Sales channels</h4>
+        </div>
+        <div class="checkbox-list">
+          <div class="checkbox-item">
+            <img src="./images/checkbox.png" alt="">
+            <p class="gray">Document the type of skills that your distibutor will need to have to be able to provide the associated services. Add it to your distributor profile. See our template online.</p>
+          </div>
+          <div class="checkbox-item">
+            <img src="./images/checkbox.png" alt="">
+            <p class="gray">In the top 3 countries where you have the most potential, start to identify the influencers. It will 
+              be helpful.
+              Contact us if you need some help we can help.</p>
+          </div>
+          <div class="checkbox-item">
+            <img src="./images/checkbox.png" alt="">
+            <p class="gray">Time to set-up a meeting to train your distributors'
+              sales team.</p>
+          </div>
+          <div class="checkbox-item">
+            <img src="./images/checkbox.png" alt="">
+            <p class="gray">What profile of distributor would best work?
+              See our distributor template on our downloads
+              page: <a style="text-decoration: none;color: #F27251;" href="http://www.exportia.com.au/downloads" target="_blank"></a> </p>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="cover-img">
+        <img src="./images/page3-bg.png" alt="" style="max-width: 100%;object-fit: cover;height: 100%;">
+      </div> -->
+      <div class="footer">
+        <div class="footer-logo">
+          <img src="./images/footer-logo.svg">
+        </div>
+        <p style="color: white;font-size: 10px;">Generate your first million Euros in Sales </p>
+      </div>
+    </div>
+  </div>
+  
+</body>
+</html>
