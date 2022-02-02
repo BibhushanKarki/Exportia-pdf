@@ -96,21 +96,18 @@
     }
 
     .donut {
-      --donut-size: 350px;
-      --donut-border-width: 65px;
+      --donut-size: 360px;
+      --donut-border-width: 70px;
       --donut-spacing: 0;
       --donut-spacing-color: 255, 255, 255;
-      --donut-spacing-deg: calc(2deg * var(--donut-spacing));
+      --donut-spacing-deg: calc(4deg * var(--donut-spacing));
       border-radius: 50%;
       height: var(--donut-size);
       margin: 0 auto;
       margin-bottom: 180px;
       position: relative;
       width: var(--donut-size);
-    }
-
-    .score-wrap{
-      width: min-content;
+      transform: rotate(23deg);
     }
 
     .donut__label {
@@ -119,8 +116,9 @@
       position: absolute;
       text-align: center;
       top: 50%;
-      transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%) rotate(-23deg);
       width: 210px;
+      
     }
 
     .donut__label__heading {
@@ -240,7 +238,7 @@
       --fifth-start: calc(var(--first) + var(--second) + var(--third) + var(--fourth));
       --fifth-check: max(calc(var(--fifth-start) - 0.5), 0);
       -webkit-clip-path: inset(0 calc(50% * (var(--fifth-check) / var(--fifth-check))) 0 0);
-      clip-path: inset(0 calc(50% * (var(--fifth-check) / var(--fifth-check))) 0 0);
+      /* clip-path: inset(0 calc(50% * (var(--fifth-check) / var(--fifth-check))) 0 0); */
     }
 
     .donut__slice__fifth::before {
@@ -294,6 +292,56 @@
       border-bottom-color: rgba(22, 133, 184, calc(100 * (var(--seventh) - 0.5)));
       border-left-color: rgba(22, 133, 184, calc(100 * (var(--seventh) - 0.75)));
       transform: rotate(calc(360deg * var(--seventh-start) + 45deg + var(--donut-spacing-deg)));
+    }
+    .score-wrap{
+      color: white;
+      z-index: 100;
+      transform: rotate(-23deg);
+      width: min-content;
+      text-align: center;
+    }
+    .score-wrap h3{
+      font-size:25px;
+    }
+    .score-wrap h4{
+      font-size:16px;
+    }
+    .score-wrap.marketing{
+      position: absolute;
+      top: 25px;
+      left: 78px;
+    }
+    .score-wrap.channel{
+      position: absolute;
+      top: 26px;
+      right:70px;
+    }
+    .score-wrap.team{
+      position: absolute;
+      top: 125px;
+      right: 10px;
+    }
+    .score-wrap.customers{
+      position: absolute;
+      bottom: 65px;
+      right: 25px;
+      transform: rotate(-50deg);
+    }
+    .score-wrap.dashboard{
+      position: absolute;
+      bottom: 15px;
+      left: 140px;
+      transform: rotate(4deg);
+    }
+    .score-wrap.country{
+      position: absolute;
+      bottom: 65px;
+      left:42px;
+    }
+    .score-wrap.product{
+      position: absolute;
+      top: 125px;
+      left: 2px;
     }
 
     .cover-img {
@@ -362,50 +410,50 @@
       <div class="donut"
         style="--first: .14; --second: .14; --third: .14; --fourth: .14; --fifth: .14; --sixth: .14; --seventh: .14; --donut-spacing: 2;">
         <div class="donut__slice donut__slice__item donut__slice__first">
-          <div class="score-wrap">
+          <div class="score-wrap marketing">
             <h3 class="fw-600">34%</h3>
-            <h4 class="fw-500">hello</h4>
+            <h4 class="fw-500">Marketing</h4>
           </div>
         </div>
         <div class="donut__slice donut__slice__item donut__slice__second">
-          <div class="score-wrap">
+          <div class="score-wrap channel">
             <h3 class="fw-600">34%</h3>
-            <h4 class="fw-500">hello</h4>
+            <h4 class="fw-500">Channel</h4>
 
           </div>
         </div>
         <div class="donut__slice donut__slice__item donut__slice__third">
-          <div class="score-wrap">
+          <div class="score-wrap team">
             <h3 class="fw-600">34%</h3>
-            <h4 class="fw-500">hello</h4>
+            <h4 class="fw-500">Team</h4>
 
           </div>
         </div>
         <div class="donut__slice donut__slice__item donut__slice__fourth">
-          <div class="score-wrap">
+          <div class="score-wrap customers">
             <h3 class="fw-600">34%</h3>
-            <h4 class="fw-500">hello</h4>
+            <h4 class="fw-500">Customers</h4>
 
           </div>
         </div>
         <div class="donut__slice donut__slice__item donut__slice__fifth">
-          <div class="score-wrap">
+          <div class="score-wrap dashboard">
             <h3 class="fw-600">34%</h3>
-            <h4 class="fw-500">hello</h4>
+            <h4 class="fw-500">Dashboard</h4>
 
           </div>
         </div>
         <div class="donut__slice donut__slice__item donut__slice__sixth">
-          <div class="score-wrap">
+          <div class="score-wrap country">
             <h3 class="fw-600">34%</h3>
-            <h4 class="fw-500">hello</h4>
+            <h4 class="fw-500">Country</h4>
 
           </div>
         </div>
         <div class="donut__slice donut__slice__item donut__slice__seventh">
-          <div class="score-wrap">
+          <div class="score-wrap product">
             <h3 class="fw-600">34%</h3>
-            <h4 class="fw-500">hello</h4>
+            <h4 class="fw-500">Product</h4>
 
           </div>
         </div>
